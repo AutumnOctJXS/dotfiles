@@ -43,6 +43,10 @@ return{
         -- tag = 'v2.15', -- uncomment to pin to a specific release
         init = function()
         -- VimTeX configuration goes here
-        end
+        end,
+    },
+    {
+        --copilot.lua GitHub Copilot補完プラグイン
+        'zbirenbaum/copilot.lua',
     },
 }
