@@ -17,9 +17,9 @@ vim.o.encoding = 'utf-8'
 -- 書込文字コード
 vim.o.fileencoding = 'utf-8'
 -- スペースの割り当てを解除
-vim.keymap.set('n', '<Space>', '<Nop>')
+vim.keymap.set('n', ' ', '<Nop>')
 -- リーダをスペースに設定
-vim.g.mapleader = '<Space>'
+vim.g.mapleader = ' '
 -- ローカルリーダをカンマに設定
 vim.g.maplocalleader = ','
 -- jjでエスケープ
