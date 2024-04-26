@@ -5,6 +5,8 @@ return{
         dependencies = {
             'nvim-tree/nvim-web-devicons',
         },
+        -- NeoVim起動時にロード
+        event = 'VimEnter',
         config = true,
     },
     {
@@ -14,8 +16,8 @@ return{
             'nvim-tree/nvim-web-devicons',
         },
         keys = {
-            -- Ctrl+Nで切り替え
-            {'<C-n>', '<CMD>NvimTreeToggle<CR>', mode = 'n', noremap = true, silent = true},
+            -- Ctrl+Nで切り替え・ロード
+            {'<C-n>', '<Cmd>NvimTreeToggle<CR>', mode = 'n', noremap = true, silent = true},
         },
         config = true,
     },
@@ -27,26 +29,30 @@ return{
             'nvim-lua/plenary.nvim',
         },
         keys = {
-            -- Space+FFで起動
-            {'<SPACE>ff', '<CMD>Telescope find_files<CR>', mode = 'n', noremap = true, silent = true,},
+            -- Leader+ffで起動・ロード
+            {'<Leader>ff', '<Cmd>Telescope find_files<CR>', mode = 'n', noremap = true, silent = true,},
         },
         config = true,
     },
     {
         -- lexima.vim 括弧補完
         'cohama/lexima.vim',
+        -- NeoVim起動時にロード
+        event = 'VimEnter',
     },
     {
         -- vimtex TeX編集補助
         'lervag/vimtex',
-        lazy = false,     -- we don't want to lazy load VimTeX
-        -- tag = 'v2.15', -- uncomment to pin to a specific release
-        init = function()
-        -- VimTeX configuration goes here
-        end,
+        -- NeoVim起動時にロード
+        event = 'VimEnter',
     },
     {
-        --copilot.lua GitHub Copilot補完プラグイン
+        --copilot.lua GitHub Copilot補完
         'zbirenbaum/copilot.lua',
+        -- :Copilotでロード
+        cmd = 'Copilot',
+        -- インサートモード時にロード
+        event = 'InsertEnter',
+        config = true,
     },
 }
