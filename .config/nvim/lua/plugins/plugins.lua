@@ -2,6 +2,7 @@ return{
     {
         -- lualine.nvim ステータスライン
         'nvim-lualine/lualine.nvim',
+        -- 依存プラグイン設定
         dependencies = {
             'nvim-tree/nvim-web-devicons',
         },
@@ -10,8 +11,22 @@ return{
         config = true,
     },
     {
+        -- iceberg.vim カラースキーム
+        'cocopon/iceberg.vim',
+        -- 優先度設定
+        priority = 1000,
+        -- 遅延ロード無効化
+        lazy = false,
+        config = function()
+            -- カラースキームを設定
+            vim.o.background = 'dark'
+            vim.cmd('colorscheme iceberg')
+        end
+    },
+    {
         -- nvim-tree ディレクトリツリー
         'nvim-tree/nvim-tree.lua',
+        -- 依存プラグイン設定
         dependencies = {
             'nvim-tree/nvim-web-devicons',
         },
@@ -25,6 +40,7 @@ return{
         -- telescope.nvim ファイルファインダ
         'nvim-telescope/telescope.nvim',
         tag = '0.1.5',
+        -- 依存プラグイン設定
         dependencies = {
             'nvim-lua/plenary.nvim',
         },
