@@ -59,8 +59,8 @@ return{
     {
         -- vimtex TeX編集補助
         'lervag/vimtex',
-        -- NeoVim起動時にロード
-        event = 'VimEnter',
+        -- 遅延ロード無効化
+        lazy = false,
     },
     {
         --copilot.lua GitHub Copilot補完
