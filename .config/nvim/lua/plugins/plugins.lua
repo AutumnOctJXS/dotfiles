@@ -56,19 +56,4 @@ return{
         -- NeoVim起動時にロード
         event = 'VimEnter',
     },
-    {
-        -- vimtex TeX編集補助
-        'lervag/vimtex',
-        -- 遅延ロード無効化
-        lazy = false,
-    },
-    {
-        --copilot.lua GitHub Copilot補完
-        'zbirenbaum/copilot.lua',
-        -- :Copilotでロード
-        cmd = 'Copilot',
-        -- インサートモード時にロード
-        event = 'InsertEnter',
-        config = true,
-    },
 }
