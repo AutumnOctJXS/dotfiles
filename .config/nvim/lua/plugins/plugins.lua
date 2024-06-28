@@ -11,6 +11,18 @@ return{
         config = true,
     },
     {
+        -- bufferline.nvim バッファライン
+        'akinsho/bufferline.nvim',
+        version = "*",
+        -- 依存プラグイン設定
+        dependencies = {
+            'nvim-tree/nvim-web-devicons',
+        },
+        -- NeoVim起動時にロード
+        event = 'VimEnter',
+        config = true,
+    },
+    {
         -- iceberg.vim カラースキーム
         'cocopon/iceberg.vim',
         -- 優先度設定
